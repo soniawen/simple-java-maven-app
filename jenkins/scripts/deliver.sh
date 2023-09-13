@@ -22,5 +22,7 @@ set +x
 
 echo 'The following command runs and outputs the execution of your Java'
 echo 'application (which Jenkins built using Maven) to the Jenkins UI.'
+echo '${NAME}'
+echo '${VERSION}'
 set -x
-java -jar ${PWD}/target/${NAME}-${VERSION}.jar
+java -jar ${PWD}/target/my-app-1.0.jar
