@@ -18,12 +18,12 @@ echo 'The following complex command behaves similarly to the previous one but'
 echo 'extracts the value of the <version/> element within <project/> instead.'
 set -x
 VERSION=`mvn help:evaluate -Dexpression=project.version | grep "^[^\[]"`
-ver = `mvn help:evaluate -Dexpression=project.version -q -DforceStdout`
+VER=$(mvn help:evaluate "-Dexpression=project.version")
 set +x
 
 echo 'The following command runs and outputs the execution of your Java'
 echo 'application (which Jenkins built using Maven) to the Jenkins UI.'
 echo '${NAME}'
-echo '${ver}'
+echo '${VER}'
 set -x
 java -jar target/my-app-1.0.jar
