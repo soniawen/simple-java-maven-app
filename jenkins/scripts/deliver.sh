@@ -25,4 +25,4 @@ echo 'application (which Jenkins built using Maven) to the Jenkins UI.'
 echo '${NAME}'
 echo '${VERSION}'
 set -x
-java -jar ${PWD}/target/my-app-1.0.jar
+java -jar target/my-app-1.0.jar
